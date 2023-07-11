@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html align="center">
+    <Head>
+        <title>Registration Form</title>
+        <link rel="Stylesheet" href="styles.css"
+    </Head>
+    <body>
+      <header align="right"><pre><a href="Youtube.com">Home</a>   <a href="Facebook.com">Contact</a> <a href="twitter.com">Registration</a></pre></header>
+<div>
+    <hr>
+    <h1>Vendor Registration</h1>
+    <form action="" Method="post">
+        <label for="Name">Vendor name:</label>
+        <input type="text" name="Name" placeholder="Name" minlength="2" maxlength="60"><br><br>
+        <label for="text">GST Number:</label>
+        <input type="text" name="GST Number" placeholder="GST Number" minlength="15" maxlength="15" 
+        style='text-transform:uppercase'><br><br>
+        <label for="text" field type="required">PAN Number:</label>
+        <input type="text" name="PAN Number" placeholder="PAN Number" maxlength="10" maxlength="10" 
+        style='text-transform:uppercase'><br><br>
+        <label for="tel">Phone Number:</label>
+        <input type="tel" name="Number" placeholder="+91 807777777" minlength="10" maxlength="10" /><br><br>
+        <label for="1">KYC Update:
+            <input type="radio" VALUE="Yes" name="KYC Update" id="1">Yes 
+        <label for="2">
+            <input type="radio" VALUE="No" name="KYC Update" id="2">No
+            <BR><BR>
+        Deals in Products:
+        <label for="3">
+            <input type="checkbox" value="HP" name="Products" id="3">HP
+            <label for="4">
+                <input type="checkbox" value="HP" name="Products" id="4">Dell
+            <label for="5">
+                    <input type="checkbox" value="HP" name="Products" id="5">Lenovo
+        </label><br><br>
+        Select Your State:
+        <select name="State" id="State">
+            <option value="Haryana">Haryana</option>
+            <option value="UttarPradesh">UttarPradesh</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Bihar">Bihar</option>
+            <option value="MadhyaPradesh">MadhyaPradesh</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Jammu & Kasmir">Jammiu & Kasmir</option>
+            <option value="tamil naidu">Tamil Naidu</option>
+        </select><br><br>
+        Address:<text break area>
+        <textarea name="Address" placeholder="Full Address"></textarea><br><br>
+        Upload Your Identity:
+        <input type="file" name="upload" accept="application/pdf,application/vnd.ms-excel" /><br><br>
+        <input type="submit" value="submit">
+        <hr>
+    </form>
+    </body>
+</div>
+</html>
