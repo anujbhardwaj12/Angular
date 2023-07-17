@@ -1,0 +1,124 @@
+/* image goes up and down  */
+/* .image-container {
+    position: relative;
+    animation: slideUpDown 3s infinite alternate ease-in-out;
+  }
+  
+  @keyframes slideUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-20px);
+    }
+  }
+
+  /* zoom image on hover */
+  /* .zoom-image {
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .zoom-image:hover {
+    transform: scale(1.2);
+  }  */
+  /* .zoom-image {
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .zoom-image:hover,
+  .zoom-image.clicked {
+    transform: translateX(-20px);
+  } */
+
+  /* rotate image catcher */
+  .image-container {
+    position: relative;
+  }
+  
+  .circular-sliding-image {
+    overflow: hidden;
+    position: relative;
+    animation: circularSlide 3s infinite alternate linear;
+    transform-origin: center center;
+    transition: transform 0.3s ease;
+  }
+  
+  .circular-sliding-image:hover {
+    animation-play-state: paused;
+    transform: translateX(-20px);
+  }
+  
+  @keyframes circularSlide {
+    0% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+   /* .image-container {
+    position: relative;
+  }
+  
+  .random-moving-image {
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-effect {
+    pointer-events: none;
+  } */
+  /* .prank-button {
+    position: relative;
+    animation: prankAnimation 2s infinite;
+  }
+  
+  @keyframes prankAnimation {
+    0% {
+      top: 0;
+      left: 0;
+    }
+    25% {
+      top: -10px;
+      left: 10px;
+    }
+    50% {
+      top: 10px;
+      left: -10px;
+    }
+    75% {
+      top: -10px;
+      left: 10px;
+    }
+    100% {
+      top: 0;
+      left: 0;
+    }
+  }
+  
+   */
+   .footer {
+    /* background-color: #f5f5f5; */
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: large;
+  }
+
+   @media screen and (max-width: 990px) {
+   .container-fluid.h-custom {
+      margin-bottom: 10vh;
+    }
+    .text-center.text-lg-start.mt-4.pt-2 {
+      margin-bottom: 100px;
+  }
+   }

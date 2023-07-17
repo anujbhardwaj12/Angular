@@ -1,40 +1,125 @@
 <!-- <h1 class="text-center mt-4 mb-0">Contact Form</h1> -->
 <section>
-    <div class="container-fluid h-custom">
-        <div class="row d-flex justify-content-center align-items-center" style="height: 100vh;">
-            <div class="col-md-9 col-lg-6 col-xl-5">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
-                    class="img-fluid" alt="Sample image">
-            </div>
-            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-              <h2>GET IN TOUCH</h2>
-                <form [formGroup]="ContactForm" (ngSubmit)="onSubmit()">
-                    <!-- Name input -->
-                    <div class="form-outline mb-3">
-                      <!-- <label class="form-label" for="name">Name</label> -->
-                      <input type="text" formControlName="name" id="name" class="form-control form-control-lg" placeholder="Your Name" required style="border-radius: 40px;"/>
-                    </div>
-                  
-                    <!-- Email input -->
-                    <div class="form-outline mb-4">
-                      <!-- <label class="form-label" for="email">Email </label> -->
-                      <input type="email" formControlName="email" id="email" class="form-control form-control-lg" placeholder="Your Email" required style="border-radius: 40px;"/>
-                    </div>
-                  
-                    <!-- Message -->
-                    <div class="form-group">
-                      <!-- <label for="msg">Message</label> -->
-                      <textarea formControlName="msg" id="msg" class="form-control p-4" rows="3" placeholder="Your Message" required style="border-radius: 40px; height: 200px;"></textarea>
-                    </div>
-                  
-                    <div class="text-center text-lg-start mt-4 pt-2">
-                      <button type="submit" [disabled]="ContactForm.invalid" class="btn btn-primary btn-lg w-100" style="padding-left: 2.5rem; padding-right: 2.5rem; border-radius: 40px;" >Send Message</button>
-                      <p *ngIf="isSubmit" > {{submitMessage}}</p>
-                    </div>
-                  </form>
-                  
-            </div>
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center" style="height: 100vh;">
+      <div class="col-md-9 col-lg-6 col-xl-5 image-container ">
+        <div class="circular-sliding-image">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid"
+            alt="Sample image">
         </div>
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <h2>Registration</h2>
+        <form [formGroup]="ContactForm" (ngSubmit)="onSubmit()">
+          <!-- Name input -->
+          <div class="form-outline mb-2">
+            <!-- <label class="form-label" for="name">Name</label> -->
+            <input type="text" formControlName="name" id="name" class="form-control form-control-lg"
+              placeholder="Your Name" required style="border-radius: 40px;" />
+          </div>
+
+          <!-- Email input -->
+          <div class="form-outline mb-2">
+            <!-- <label class="form-label" for="email">Email </label> -->
+            <input type="email" formControlName="email" id="email" class="form-control form-control-lg"
+              placeholder="Your Email" required style="border-radius: 40px;" />
+          </div>
+
+          <!-- Phone input -->
+          <div class="form-outline mb-2">
+            <!-- <label class="form-label" for="email">Email </label> -->
+            <input type="phone" formControlName="phone" id="phone" class="form-control form-control-lg"
+              placeholder="Your Mobile Number" required style="border-radius: 40px;" />
+          </div>
+
+          <div class="row mb-2">
+            <div class="col-md-6">
+              <input type="text" formControlName="gst" id="gst" class="form-control" placeholder="Gst Number" required
+                style="border-radius: 40px;" />
+            </div>
+            <div class="col-md-6">
+              <input type="text" formControlName="pan" id="pan" class="form-control" placeholder="Pan Number" required
+                style="border-radius: 40px;" />
+            </div>
+          </div>
+
+
+          <div class="form-outline form-control d-flex justify-content-space-around w-100 mb-2" style="border-radius: 40px;">
+            <label class="form-label mr-4" for="kyc_update">Kyc Update: </label>
+            <input type="radio" class="radioGroup" formControlName="kyc_update" id="yes" value="yes" />
+            <label for="yes" class="mr-4 mx-1" >Yes</label>
+            
+            <input type="radio" class="radioGroup" formControlName="kyc_update" id="no" value="no" />         
+            <label for="no" class="mx-1">No</label>
+          </div>
+
+          <div class="form-outline form-control d-flex justify-content-space-around w-100 mb-2"
+            style="border-radius: 40px;">
+            <label class="form-label" for="prod_details">Deals in Products: </label>
+            <div class="form-check form-check-inline mx-4">
+              <input class="form-check-input" type="checkbox" formControlName="prod_details" id="dell" value="dell">
+              <label class="form-check-label" for="dell">Dell</label>
+            </div>
+            <div class="form-check form-check-inline mx-4">
+              <input class="form-check-input" type="checkbox" formControlName="prod_details" id="hp" value="hp">
+              <label class="form-check-label" for="hp">HP</label>
+            </div>
+            <div class="form-check form-check-inline mx-4">
+              <input class="form-check-input" type="checkbox" formControlName="prod_details" id="lenovo" value="lenovo">
+              <label class="form-check-label" for="lenovo">Lenovo</label>
+            </div>
+          </div>
+
+          <!-- checkbox -->
+          <!-- <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
+                      <label class="form-check-label" for="inlineCheckbox1">1</label>
+                    </div>
+                    
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
+                      <label class="form-check-label" for="inlineCheckbox2">2</label>
+                    </div>
+                    
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled />
+                      <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+                    </div> -->
+
+          <!-- select state -->
+          <div class="form-outline form-control mb-2" style="border-radius: 40px;">
+            <label for="state_selection"> Select Your State</label>
+            <select formControlName="state" id="state" class="text-dark mx-4"> Select State
+              <option value="haryana">Haryana</option>
+              <option value="uttar Pradesh">Uttar Pradesh</option>
+              <option value="punjab">Punjab</option>
+              <option value="rajasthan">Rajasthan</option>
+              <option value="karnataka">Karnataka</option>
+              <option value="jammu">Jammu</option>
+              <option value="bihar">Bihar</option>
+            </select>
+          </div>
+
+
+          <!-- Message -->
+          <div class="form-group">
+            <!-- <label for="msg">Message</label> -->
+            <textarea formControlName="msg" id="msg" class="form-control pt-2" rows="3" placeholder="Your Message"
+              required style="border-radius: 20px; "></textarea>
+          </div>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="submit" [disabled]="ContactForm.invalid" class="btn btn-primary btn-lg w-100"
+              style="padding-left: 2.5rem; padding-right: 2.5rem; border-radius: 40px;">Send Message</button>
+            <p *ngIf="isSubmit"> {{submitMessage}}</p>
+          </div>
+        </form>
+
+      </div>
     </div>
 
+  </div>
+
 </section>
+<footer class="text-center footer" style="color: black;">Designed By <a href="https://github.com/Rohitashsingh89"
+    target="_blank" style="color: blue;">Rohitah Singh</a></footer>
